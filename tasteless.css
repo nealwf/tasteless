@@ -1,0 +1,596 @@
+/* Tasteless CSS */
+
+@font-face {
+  font-family: "Arbutus";
+  src: url(fonts/Arbutus-Regular.ttf);
+}
+
+@font-face {
+  font-family: "CMU";
+  src: url(fonts/cmu.sans-serif-medium.ttf);
+}
+
+@font-face {
+  font-family: 'Cursive';
+  src: url(fonts/5th-grade-cursive.regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+font-family: "Arbutus Slab", serif;
+}
+
+ol {
+  margin-left: 2em
+}
+
+ol ol {
+  list-style-type:lower-alpha;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Hepta Slab", serif;
+}
+
+h1 {
+  margin: 1em 0 0.5em;
+}
+
+h2 {
+  background-color: white;
+  padding: 0.3em 0.3em 0.3em 0;
+  /*margin: 1em 0 1em 2em;
+    position: relative;
+    top: -2.2em;*/
+  width: max-content;
+}
+
+main > p, section ul, section ol {
+  margin-bottom: 1.3em;
+}
+
+p, ul, ol {
+  font-size: 18px;
+}
+
+#container {
+    background-image: url(leaf_bord_left.png);
+
+    background-clip:content-box;
+    background-size: 7vw;
+    background-repeat: no-repeat;
+}
+
+#title {
+  font-size: 2.4em;
+  font-family: "Arbutus", serif;
+  margin-top: 1em;
+position: relative;
+left: -57px;
+letter-spacing: -2px;
+}
+
+#subtitle {
+  font-family: "Arbutus Slab", serif;
+  font-weight: bold;
+  font-size: 1.1em;
+  width: 70%;
+position: relative;
+left: -57px;
+line-height: 1.6em;
+}
+
+#primary-header {
+  width: 19%;
+  height: 100vh;
+  font-family: "Bodoni Moda", serif;
+  /*background-color: #d2ccac;*/
+  position: sticky;
+  top: 0.5em;
+  margin-right: 1em;
+padding-right: 2em;
+  background-image: url(header_back.png);
+   
+    background-clip:content-box;
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position-y: -0.4em;
+  /*border: 2px solid black;*/
+   /* background-image: url(pathtoprt.svg), url(pathbotrt.svg);
+    background-position: top right, bottom right;
+    background-clip:padding-box, padding-box;
+    background-size: 7vw, 7vw;
+    background-repeat: no-repeat, no-repeat;*/
+
+}
+
+#primary-header p {
+  text-align: center;
+  align-self: center;
+}
+
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  width: 100%;
+}
+
+nav ul li {
+  margin: 1.3em 0;
+  width: 90%;
+  transition: width 1s;
+  background-color: transparent; /*current fully popped out */
+
+}
+
+nav ul li a {
+  padding: 0.8em;
+  font-family: "Hepta Slab", serif;
+  color: black;
+  font-weight: 800;
+  text-decoration: none;
+  line-height: 1.4em;
+background-color: #CDC8AB;
+  font-size: 16px;
+  border-width: 7px 40px;
+  border-style: solid;
+  border-left: none;
+  border-image-source: url(border_image.png);
+border-image-slice: 6 42 7;
+border-radius: 100px;
+
+}
+
+nav ul li:hover {
+  width: 100%;
+  transition: width 1s;
+}
+
+nav ul li:hover > a::before {
+  content: "\2767";
+  display: inline;
+  font-size: 1.4em;
+  margin-right: 0.2em;
+}
+
+nav ul li:hover > a {
+  text-decoration: underline;
+}
+
+#current-page {
+  width: 100%;
+}
+
+#current-page > a::before {
+  content: "\2767";
+  display: inline;
+  font-size: 1.4em;
+  margin-right: 0.2em;
+  text-decoration:#CDC8AB;
+}
+
+main {
+  width: 85%;
+  padding-right: 2em;
+}
+
+section {
+  border-top: 2px solid #555;
+  border-bottom: 2px solid #555;
+}
+
+footer {
+  width: 11%;
+  position: fixed;
+  left: 0;
+  top: 85vh;
+  text-align: center;
+}
+
+footer p {
+  font-family: "Cursive", fantasy;
+}
+
+footer p span {
+  font-family: 'Arbutus Slab', serif;
+}
+
+/****** Dictionary ******/
+
+dt {
+  font-family: "Arbutus Slab", serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+
+table {
+  margin-top: 1em;
+}
+
+th,td {
+  padding-right: 2em;
+  text-align: left;
+}
+
+/****** Specimens ******/
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.date {
+ /* height: 100%;
+  background-image: url(leaf_border.png); */
+}
+
+.book {
+  /* border: 1px solid black;
+  border-radius: 10px; */
+  padding: 1em;
+  margin: 0em 1em 2em 7em;
+  max-width: 80%;
+  min-width: 80%;
+  align-self: flex-start;
+}
+
+.book header p::before {
+  content: "\02767";
+  margin: 0 0.3em;
+}
+
+.book .flex-left-column {
+  list-style-type: none;
+  flex-wrap: wrap;
+max-height: 150vh;
+}
+
+.book .flex-space {
+  list-style-type: none;
+  flex-wrap: wrap;
+width: 100%;
+margin-top: 2em;
+}
+
+.book ul li img, .loose {
+  max-width: 28vw;
+}
+
+blockquote {
+  width: 80%;
+text-indent: 2em;
+margin: 1em auto;
+font-size: 18px;
+}
+
+blockquote p, .cmu {
+  font-family: "CMU", sans-serif;
+}
+
+/****** Sources ******/
+
+.arbutus, .cursive, .arbutus-slab, .hepta, .cmu {
+  font-size: 1.3em;
+}
+
+.arbutus {
+  font-family: "Arbutus";
+}
+
+.cursive {
+  font-family: "Cursive";
+}
+
+.arbutus-slab {
+  font-family: "Arbutus Slab";
+}
+
+.hepta {
+  font-family: "Hepta Slab";
+font-weight: 800;
+}
+
+.citation {
+  text-indent: 0.5em hanging;
+}
+
+.indent {
+  margin-left: 2em;
+margin-bottom: 2em;
+}
+
+/****** Flex Classes ******/
+
+/* Back compatibility achieved with Autoprefixer https://autoprefixer.github.io/ */
+/* for other values see https://ptb2.me/flexbox/ */
+
+.flex-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-pack: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.flex-right {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: flex-end;
+  justify-content: flex-end;
+}
+
+.flex-left {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-pack: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.flex-space {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.flex-center-column {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.flex-bottom {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.flex-left-column {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.flex-right-column {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.flex-top-right-column {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+  -ms-flex-pack: flex-start;
+  -webkit-box-pack: flex-start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.flex-top {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.flex-top-left-column {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-pack: flex-start;
+  -webkit-box-pack: flex-start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.flex-top-left {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-pack: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
