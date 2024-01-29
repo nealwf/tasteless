@@ -21,8 +21,45 @@
 font-family: "Arbutus Slab", serif;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+height: 100%;
+
+display: grid;
+grid-template-columns: 19% [header-right] 1fr;  
+grid-template-rows: 1fr 100px;
+grid-template-areas: "header main"
+"footer main";
+}
+
+#page-bg {
+  grid-area: 1 / 1 / 3 / header-right;
+  background-image: url(header_back.png);
+
+background-clip:content-box;
+    background-size: contain;
+    background-repeat: no-repeat; 
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+
 ol {
-  margin-left: 2em
+  margin-left: 2em;
+  margin-bottom: 1.3em;
 }
 
 ol ol {
@@ -85,20 +122,17 @@ line-height: 1.6em;
 }
 
 #primary-header {
-  width: 19%;
-  height: 100vh;
+ /* width: 19%;
+  height: 100vh;*/
   font-family: "Bodoni Moda", serif;
   /*background-color: #d2ccac;*/
   position: sticky;
   top: 0.5em;
   margin-right: 1em;
 padding-right: 2em;
-  background-image: url(header_back.png);
+  
    
-    background-clip:content-box;
-    background-size: contain;
-    background-repeat: no-repeat; 
-    background-position-y: -0.4em;
+    
   /*border: 2px solid black;*/
    /* background-image: url(pathtoprt.svg), url(pathbotrt.svg);
     background-position: top right, bottom right;
