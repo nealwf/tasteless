@@ -36,12 +36,15 @@ grid-template-areas: "header main"
 }
 
 #page-bg {
-  grid-area: 1 / 1 / 3 / header-right;
+  position: fixed;
   background-image: url(header_back.png);
 
 background-clip:content-box;
     background-size: contain;
     background-repeat: no-repeat; 
+
+height: 100vh;
+  width: 18%;
 }
 
 header {
@@ -122,15 +125,14 @@ line-height: 1.6em;
 }
 
 #primary-header {
- /* width: 19%;
-  height: 100vh;*/
+ width: 19%;
+  /*height: 100vh;*/
   font-family: "Bodoni Moda", serif;
   /*background-color: #d2ccac;*/
-  position: sticky;
+  position: fixed;
   top: 0.5em;
   margin-right: 1em;
-padding-right: 2em;
-  
+  left: -1em;
    
     
   /*border: 2px solid black;*/
